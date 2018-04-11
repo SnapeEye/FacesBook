@@ -15,7 +15,7 @@ export default class AuthentificationComponent extends React.Component {
         super(props);
         this.facadeAPI = props.facade;
         this.classes = {};
-        this.isLoggedIn = props.isLoggedIn;
+        this.isLoggedIn = false;
         this.initClassLists();
     }
 
