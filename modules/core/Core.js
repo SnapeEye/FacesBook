@@ -1,7 +1,10 @@
+import Facade from './../facade/Facade';
+import Header from './../header/Header';
+
 export default class Core {
     constructor(config) {
         this.config = config;
-        this.facede = null;
+        this.facade = null;
         this.header = null;
         this.sidebar = null;
         this.footer = null;
@@ -20,11 +23,13 @@ export default class Core {
     };
 
     initFacade = () => {
-
+        this.facade = new Facade(this.config);
     };
 
     initHeader = () => {
-
+        this.header = new Header({
+           facade: this.facade,
+        });
     };
 
     initSidebar = () => {
